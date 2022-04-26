@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="address" class="com.example.demo.Address">
+        <property name="city" value="New Bro City"></property>
+        <property name="state" value="Bro Island"></property>
+        <property name="country" value="United States of Bro-merica"></property>
+        <property name="zipcode" value="12345"></property>
+    </bean>
+    <bean id="phone" class="com.example.demo.Phone">
+        <property name="mob" value="1234567890"></property>
+    </bean>
+    <bean id="student" class="com.example.demo.Student">
+        <property name="id" value="555"></property>
+        <property name="name" value="Spencer"></property>
+        <property name="ph" ref="phone"></property>
+        <property name="add" ref="address"></property>
+    </bean>
+</beans>
